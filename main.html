@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.js'></script>
+</head>
+<body>
+<div class='main'>
+    <p class="welcome">Hi! Welcome {{user.nickname()}} </p><br>
+    <p class="welcome" style="top:20px"><a href="{{ url|safe }}">{{ url_linktext }}</a></p>
+    <div>
+        <form id="form1">
+            <div>
+                <label for="year">Year: </label>
+                <select name="year" form="form1">
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                </select>
+                <br>
+            </div>
+            <br>
+            <div>
+                <label for="thesis_title">Title: </label>
+                <input type='text' name='thesis_title' placeholder='Title'/>
+                <br>
+            </div>
+            <br>
+            <div>
+                <label for="abstract">Abstract: </label>
+                <textarea form="form1" name="abstract" rows="10" cols="54"></textarea>
+            </div>          
+            <br>
+            <div>
+                <label for="adviser">Adviser: </label>
+                <input type='text' name='adviser' placeholder='Adviser'/>
+            </div>
+            <br>
+            <div>
+                <label for="section">Section: </label>
+                <select name="section" form="form1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <input type='submit' value='Submit'></input>
+        </form>
+    </div>
+    <div class='list-section'>
+        <ul class= "thesis-list">
+            <!-- list will be added here -->
+        </ul>
+    </div>
+</div>
+
+
+<script type="text/javascript" src='/static/script.js'></script>
+</body>
+</html>
